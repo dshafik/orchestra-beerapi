@@ -13,6 +13,10 @@
      <name>rating</name>
      <required>0</required>
     </parameter>
+    <parameter>
+     <name>user</name>
+     <required>0</required>
+    </parameter>
    </parameters>
   </action>
   <action>
@@ -21,8 +25,26 @@
    <public>1</public>
    <description>GET a list of beers</description>
    <route>/beers</route>
-   <parameters></parameters>
    <hash>f58d66a767ce40dc3a0108141f9d19b16498dc0b</hash>
+   <parameters>
+    <parameter>
+     <name>user</name>
+     <required>0</required>
+    </parameter>
+   </parameters>
+  </action>
+  <action>
+   <name>Results</name>
+   <enabled>1</enabled>
+   <public>1</public>
+   <description>Retrieve the overall results</description>
+   <route>/results</route>
+   <hash>48a68ab3a0c3eae59b4adb316c2ed3645e5938f9</hash>
+   <parameters>
+    <parameter>
+     <required>0</required>
+    </parameter>
+   </parameters>
   </action>
  </actions>
 </frapi-config>
