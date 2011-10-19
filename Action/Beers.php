@@ -84,7 +84,7 @@ class Action_Beers extends Frapi_Action implements Frapi_Action_Interface
 			$collection->save((array) $data->beers->beer[$key]);
 		}*/
 		
-		$beers = iterator_to_array($collection->find(array(), array('_id', 'name'))->sort(array('name' => 1)));
+		$beers = iterator_to_array($collection->find(array(), array('_id', 'name', 'rating'))->sort(array('name' => 1)));
 		
 		if (isset($_GET['user'])) {
 			$user_ratings_result = $ratings->find(array('user' => $_GET['user']));
