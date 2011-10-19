@@ -111,7 +111,7 @@ class Action_Beer extends Frapi_Action implements Frapi_Action_Interface
 		$ratings->update(
 					array('user' => $_POST['user'], 'beer' => $this->getParam('id')),
 					array('$set' => array('rating' => $_POST['rating'])),
-					array('upsert' => true)
+					array('upsert' => true, 'fsync' => true)
 				);
 		
 		
